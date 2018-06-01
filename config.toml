@@ -97,6 +97,28 @@ theme = "hugo-icarus-theme"
     twitter_domain  = ""
     twitter         = "kryptokrauts"
 
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = false
+    respectDoNotTrack = true
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.speakerDeck]
+    disable = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+  [privacy.vimeo]
+    disable = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+
 # Enable and disable widgets for the right sidebar
 [params.widgets]
     recent_articles = true
