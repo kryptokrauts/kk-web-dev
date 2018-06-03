@@ -4,7 +4,7 @@
       <img src="/flags/{{ .Site.Language.Lang }}.png" alt="{{ .Site.Language.Lang }}">
     </a>
     <ul class="dropdown-menu">
-    {{ if .IsTranslated -}}
+    {{ if .IsTranslated }}
       {{ range .Translations }}
           <li><a href="{{ .Permalink }}" lang="{{ .Lang }}">
             <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}">
@@ -23,7 +23,7 @@
   </li>
 {{ else }}
   <li class="lang-switcher dropdown two-lang">  
-    {{ if .IsTranslated -}}
+    {{ if .IsTranslated }}
       {{ range .Translations }}
           <a href="{{ .Permalink }}" lang="{{ .Lang }}">
             <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}">
