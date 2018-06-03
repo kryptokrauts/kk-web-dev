@@ -1,0 +1,51 @@
+<header class="article-header">
+    <a href="{{ .Permalink }}" lang="{{ .Lang }}">
+    <h1 class="article-title" itemprop="name">
+        {{ .Title }}
+    </h1>
+    </a>
+    {{ if not .Params.hide_metadata }}
+        <div class="article-meta">
+
+            {{ if not .Params.nodateline }}
+            <div class="article-date">
+                <i class="fa fa-calendar"></i>
+                <time datetime="{{ .Date }}" itemprop="datePublished">{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
+                &middot;
+                {{ .WordCount }}
+                {{ i18n "words" }}.
+                &middot;
+                {{ .ReadingTime }}
+                {{ i18n "readingtime" }}.
+            </div>
+            {{ end }}
+            {{ if isset .Params "categories" }}
+                {{ $categoriesLen := len .Params.categories }}
+                {{ if gt $categoriesLen 0 }}
+                <div class="article-category">
+                    <i class="fa fa-folder"></i>
+                    {{ range $k, $v := .Params.categories }}
+                    {{ $url := (. | urlize | lower) }}
+                    <a class="article-category-link" href="{{ $url | absLangURL }}">{{ i18n . }}</a>
+                    {{ if lt $k (sub $categoriesLen 1) }}&middot;{{ end }}
+                    {{ end }}
+                </div>
+                {{ end }}
+            {{ end }}
+
+            {{ if isset .Params "tags" }}
+                {{ $tagsLen := len .Params.tags }}
+                {{ if gt $tagsLen 0 }}
+                <div class="article-category">
+                    <i class="fa fa-tags"></i>
+                    {{ range $k, $v := .Params.tags }}
+                    {{ $url := printf "tags/%s" (. | urlize | lower) }}
+                    <a class="article-category-link" href="{{ $url | absLangURL }}">{{ . }}</a>
+                    {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
+                    {{ end }}
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    {{ end }}
+</header>

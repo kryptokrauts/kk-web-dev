@@ -1,0 +1,87 @@
+
+[translationsLabel]
+  other = "Andere Sprachen : "
+[translationsSeparator]
+  other = ", "
+[date_format]
+  other = "02-01-2006"
+[languageSwitcherLabel]
+  other = "Sprache"
+
+#
+# articles
+#
+[words]
+  other = "Wörter"
+[readingtime]
+  other = "Minute Lesezeit"
+[articles-share]
+  other = "Teilen"
+[articles-comments]
+  other = "Kommentare"
+[articles-read-more]
+  other = "Weiterlesen"
+[posts-older]
+  other = "Ältere Artikel"
+[posts-newer]
+  other = "Neuere Artikel"
+[postedOnDate]
+  other = "Veröffentlicht am {{ .Count }}"
+
+#
+# widgets
+#
+[widget-cat-title]
+  other = "Kategorien"
+[widget-recents-title]
+  other = "Aktuell"
+[tags-title]
+  other = "Tags"
+[tag-cloud-title]
+  other = "Tag Wolke"
+
+#
+# Categories
+#
+[announcement]
+  other = "Ankündigungen"
+[basic-knowledge]
+  other = "Kryptospace Grundlagen"
+[expert-knowledge]
+  other = "Expertenwissen"
+[trading]
+  other = "Trading"
+[tracking-taxation]
+  other = "Tracking & Steuer"
+
+#
+# Header
+#
+[search-placeholder]
+  other = "Suchen"
+
+#
+# Pagination
+#
+[pagination-previous]
+  other = "Zurück"
+[pagination-next]
+  other = "Vor"
+
+#
+# Profile
+#
+[profile-follow-button]
+  other = "Folgen"
+[profile-posts]
+  other = "Artikel"
+[profile-tags]
+  other = "Tags"
+
+#
+# 404 Page not found
+#
+[page-not-found-title]
+  other = "404 - Seite nicht gefunden"
+[page-not-found-subtitle]
+  other = "Der angeforderte Inhalt existiert nicht."
