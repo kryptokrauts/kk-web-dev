@@ -1,3 +1,4 @@
+baseurl = "https://kryptokrauts.com/"
 title = "kryptokrauts"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "kryptokrauts"
