@@ -1,3 +1,4 @@
+{{ $langDomain := .Site.BaseURL | replaceRE "^https?://(www\\.)?([^/]+)/?" "$2" | relLangURL }}
 <header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
@@ -28,7 +29,7 @@
                 <input type="search" name="q" class="search-form-input" placeholder="{{ i18n "search-placeholder"}}">
                 <button type="submit" class="search-form-submit">
                 </button>
-                <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
+                <input type="hidden" name="sitesearch" value="{{ $langDomain }}" />
            </form>
           </div>
         </div>
@@ -44,7 +45,7 @@
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
+          <input type="hidden" name="sitesearch" value="{{ $langDomain }}" />
           </form>
         </td>
       </tr>
