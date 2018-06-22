@@ -48,4 +48,14 @@
             {{ end }}
         </div>
     {{ end }}
+    {{ if .IsTranslated }}
+        <h4>{{ i18n "translations" }}</h4>
+        <ul>
+            {{ range .Translations }}
+            <li>
+                <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}" style="width:20px;margin-right:10px"><a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end}}
+        </ul>
+    {{ end }}
 </header>

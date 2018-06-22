@@ -23,20 +23,12 @@
   </li>
 {{ else }}
   <li class="lang-switcher dropdown two-lang">  
-    {{ if .IsTranslated }}
-      {{ range .Translations }}
-          <a href="{{ .Permalink }}" lang="{{ .Lang }}">
-            <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}">
-          </a>
-      {{ end }}
-    {{ else }}
       {{ range .Site.Languages }}
         {{ if not (eq .Lang $.Site.Language.Lang) }}
         <a href="/{{ .Lang }}" lang="{{ .Lang }}">
             <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}">
         </a>
         {{ end }}
-    {{ end }}
-  {{ end }}  
+    {{ end }} 
   </li>
 {{ end }}
