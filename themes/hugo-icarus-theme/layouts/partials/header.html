@@ -23,7 +23,10 @@
           <div class="lang-switcher-nav">
             {{ partial "widgets/language_switcher" . }}
           </div>
-          {{ end }}        
+          {{ end }}
+          <div class="login-status">
+            <!-- content will be dynamically loaded, see github.js -->
+          </div>
           <div id="search-form-wrap">
             <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
                 <input type="search" name="q" class="search-form-input" placeholder="{{ i18n "search-placeholder"}}">

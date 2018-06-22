@@ -100,7 +100,9 @@ LanguageName = "English"
 
     # Add custom assets with their paths relative to the static folder
 	custom_css = []
-	custom_js  = []
+	custom_js  = ["js/github.js"]
+
+    disable_comments = true
 
 # Enter a link for the follow button on the left
 [params.profile]
@@ -141,7 +143,7 @@ LanguageName = "English"
 
 [privacy]
   [privacy.disqus]
-    disable = false
+    disable = true
   [privacy.googleAnalytics]
     anonymizeIP = true
     disable = false
