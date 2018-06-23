@@ -72,6 +72,15 @@ $.addComment = function(issue, comment) {
     })
 }
 
+$.logRateLimit = function() {
+    var rateLimitObject = ghObject.getRateLimit();
+    rateLimitObject.getRateLimit(function(err, res) {
+        console.log("remaining core: " + res.resources.core.remaining);
+        console.log("remaining graphql: " + res.resources.graphql.remaining);
+        console.log("remaining core: " + res.resources.search.remaining);
+    });
+}
+
 $.renderGithubCommentSection = function(issue) {
     $("#github_comments").empty();
     issueObject.listIssueComments(issue, function(err, res) {
@@ -106,5 +115,6 @@ $(function() {
         if (issue !== undefined) {
             $.renderGithubCommentSection(issue);
         }
+        $.logRateLimit();
     });
 });
